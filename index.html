@@ -18,6 +18,29 @@
     <link rel="stylesheet" href="assets/css/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/vendor/glightbox/css/glightbox.min.css">
     <link rel="stylesheet" href="assets/css/css/main.css">
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCvFzf7TnVTd7KXC8TGZra4rCvX-n-gsGk",
+    authDomain: "wealthtrustpartners-412c9.firebaseapp.com",
+    projectId: "wealthtrustpartners-412c9",
+    storageBucket: "wealthtrustpartners-412c9.firebasestorage.app",
+    messagingSenderId: "1010152164313",
+    appId: "1:1010152164313:web:44acc10d01f76978a567c8",
+    measurementId: "G-ETQZR7LBRL"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </head>
 
 <body class="index-page">
@@ -228,85 +251,6 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
-        <section id="portfolio" class="portfolio section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Portfolio</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div>
-            <div class="container">
-                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-                    <ul data-aos="fade-up" data-aos-delay="100" class="portfolio-filters isotope-filters">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-app">App</li>
-                        <li data-filter=".filter-product">Product</li>
-                        <li data-filter=".filter-branding">Branding</li>
-                        <li data-filter=".filter-books">Books</li>
-                    </ul>
-                    <div class="row g-0 isotope-container" data-aos="fade-up" data-aos-delay="200">
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-app">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/app-1.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-product">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/product-1.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-branding">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/branding-1.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-books">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/books-1.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/books-1.jpg" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-app">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/app-2.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/app-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-product">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/product-2.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/product-2.jpg" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-branding">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/branding-2.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-books">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/books-2.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/books-2.jpg" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-app">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/app-3.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/app-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-product">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/product-3.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/product-3.jpg" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-branding">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/branding-3.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 portfolio-item isotope-item filter-books">
-                            <div class="h-100 portfolio-content"><img class="img-fluid" src="assets/img/portfolio/books-3.jpg" alt="">
-                                <div class="portfolio-info"><a href="assets/img/portfolio/books-3.jpg" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a><a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -524,6 +468,7 @@
             <div class="copyright"><span>Copyright</span><strong class="px-1 sitename">Vlava</strong><span>All Rights Reserved</span></div>
         </div>
     </footer><a class="d-flex justify-content-center align-items-center scroll-top" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
