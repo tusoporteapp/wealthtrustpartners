@@ -1784,12 +1784,76 @@ section, .section {
   color: #C9A84C;
 }
 
+/* Logos Simulados */
+.logo-pershing {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.logo-ib {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.logo-stonex {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.logo-av {
+  font-family: Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.logo-bny {
+  font-family: 'Times New Roman', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.logo-swissquote {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.logo-jpmorgan {
+  font-family: Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.logo-santander {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.logo-euroclear {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.logo-citibank {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+.logo-mercantil {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.logo-latinclear {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-290px * 11)); /* 11 marcas únicas */
+    transform: translateX(calc(-290px * 12)); /* 12 marcas únicas */
   }
 }
 
