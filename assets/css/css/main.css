@@ -1690,20 +1690,70 @@ section, .section {
 # Custodians Marquee
 --------------------------------------------------------------*/
 .custodians {
-  padding: 60px 0;
-  background-color: var(--background-color);
+  padding: 40px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.custodians-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.custodians-title {
+  padding-left: 50px;
+  padding-right: 30px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.custodians-title h2 {
+  font-family: var(--heading-font);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0A1628; /* Navy oscuro */
+  margin: 0;
+  line-height: 1;
+}
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
 }
 
 .marquee {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
   display: flex;
 }
 
 .marquee-content {
   display: flex;
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
   white-space: nowrap;
 }
 
@@ -1713,31 +1763,25 @@ section, .section {
 
 .marquee-item {
   flex: 0 0 auto;
-  width: 200px;
+  width: 250px;
   margin: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0d1e34;
-  border: 1px solid rgba(201, 168, 76, 0.2);
-  border-radius: 8px;
-  padding: 20px;
-  height: 80px;
-  transition: all 0.3s ease;
-}
-
-.marquee-item:hover {
-  border-color: var(--accent-color);
-  background: #112540;
-  transform: translateY(-5px);
+  height: 60px;
 }
 
 .marquee-item span {
   font-family: var(--nav-font);
   font-weight: 600;
-  color: #C9A84C; /* Dorado premium */
-  font-size: 1.1rem;
-  letter-spacing: 1px;
+  color: #a0a5aa; /* Gris como la imagen */
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.marquee-item span:hover {
+  color: #C9A84C;
 }
 
 @keyframes scroll {
@@ -1745,7 +1789,19 @@ section, .section {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-240px * 6));
+    transform: translateX(calc(-290px * 11)); /* 11 marcas únicas */
+  }
+}
+
+/* Responsivo para el wrapper */
+@media (max-width: 768px) {
+  .custodians-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .custodians-title {
+    padding-left: 20px;
+    padding-bottom: 20px;
   }
 }
 
