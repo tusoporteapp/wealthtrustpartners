@@ -22,9 +22,9 @@
 
 :root {
   --background-color: #ffffff;
-  --default-color: #212529;
-  --heading-color: #052c3f;
-  --accent-color: #85b0be;
+  --default-color: #2C2C2C;
+  --heading-color: #0A1628;
+  --accent-color: #C9A84C;
   --surface-color: #ffffff;
   --contrast-color: #ffffff;
 }
@@ -33,25 +33,25 @@
 
 :root {
   --nav-color: #ffffff;
-  --nav-hover-color: #85b0be;
+  --nav-hover-color: #C9A84C;
   --nav-mobile-background-color: #ffffff;
   --nav-dropdown-background-color: #ffffff;
-  --nav-dropdown-color: #212529;
-  --nav-dropdown-hover-color: #85b0be;
+  --nav-dropdown-color: #2C2C2C;
+  --nav-dropdown-hover-color: #C9A84C;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f7f9fb;
+  --background-color: #F8F6F0;
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #04253d;
+  --background-color: #0A1628;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #07426d;
+  --surface-color: #152238;
   --contrast-color: #ffffff;
 }
 
@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 ------------------------------ */
 
 .scrolled .header {
-  --background-color: rgba(24, 58, 73, 0.85);
+  --background-color: rgba(10, 22, 40, 0.92);
 }
 
 /* --------------------------------------------------------------
