@@ -1753,12 +1753,15 @@ section, .section {
 
 .marquee-content {
   display: flex;
-  animation: scroll 40s linear infinite;
+  animation: scroll 30s linear infinite;
+  -webkit-animation: scroll 30s linear infinite;
   white-space: nowrap;
+  will-change: transform;
 }
 
 .marquee-content:hover {
   animation-play-state: paused;
+  -webkit-animation-play-state: paused;
 }
 
 .marquee-item {
@@ -1848,12 +1851,25 @@ section, .section {
   letter-spacing: 4px;
 }
 
-@keyframes scroll {
+@-webkit-keyframes scroll {
   0% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-290px * 12)); /* 12 marcas únicas */
+    -webkit-transform: translateX(calc(-290px * 12));
+    transform: translateX(calc(-290px * 12));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-290px * 12));
+    transform: translateX(calc(-290px * 12));
   }
 }
 
