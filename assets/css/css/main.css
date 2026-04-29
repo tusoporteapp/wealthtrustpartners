@@ -1686,6 +1686,66 @@ section, .section {
 # Starter Section Section
 -------------------------------------------------------------- */
 
-.starter-section {
+/*--------------------------------------------------------------
+# Custodians Marquee
+--------------------------------------------------------------*/
+.custodians {
+  padding: 60px 0;
+  background-color: var(--background-color);
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  width: 200px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d1e34;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+.marquee-item:hover {
+  border-color: var(--accent-color);
+  background: #112540;
+  transform: translateY(-5px);
+}
+
+.marquee-item span {
+  font-family: var(--nav-font);
+  font-weight: 600;
+  color: #C9A84C; /* Dorado premium */
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-240px * 6));
+  }
 }
 
