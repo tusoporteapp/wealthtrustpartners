@@ -1762,9 +1762,9 @@ section, .section {
 }
 
 .logo-scaled {
-  width: 250px !important;
-  height: 100px !important;
-  transform: scale(1.5);
+  width: 170px !important;
+  height: 65px !important;
+  transform: scale(1.15);
 }
 
 .marquee {
