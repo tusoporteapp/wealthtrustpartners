@@ -1798,8 +1798,8 @@ section, .section {
 .marquee-item span {
   font-family: var(--nav-font);
   font-weight: 600;
-  color: #a0a5aa; /* Gris como la imagen */
-  font-size: 1.3rem;
+  color: #a0a5aa; 
+  font-size: 0.95rem;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
