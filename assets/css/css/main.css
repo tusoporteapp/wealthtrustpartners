@@ -725,7 +725,7 @@ section, .section {
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: rgba(10, 22, 40, 0.45);
   position: absolute;
   inset: 0;
   z-index: 2;
