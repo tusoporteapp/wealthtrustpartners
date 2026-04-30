@@ -1747,27 +1747,6 @@ section, .section {
   background: linear-gradient(to left, #ffffff, transparent);
 }
 
-.custodian-logo {
-  width: 100px;
-  height: 35px;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.6;
-  transition: all 0.3s ease;
-  transform: scale(0.8);
-}
-
-.custodian-logo:hover {
-  filter: none;
-  opacity: 1;
-}
-
-.logo-scaled {
-  width: 100px !important;
-  height: 35px !important;
-  transform: scale(0.8) !important;
-}
-
 .marquee {
   display: flex;
 }
@@ -1798,8 +1777,8 @@ section, .section {
 .marquee-item span {
   font-family: var(--nav-font);
   font-weight: 600;
-  color: #a0a5aa; 
-  font-size: 0.95rem;
+  color: #a0a5aa; /* Gris como la imagen */
+  font-size: 1.3rem;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
