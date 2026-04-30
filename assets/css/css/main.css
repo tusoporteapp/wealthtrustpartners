@@ -1761,6 +1761,12 @@ section, .section {
   opacity: 1;
 }
 
+.logo-scaled {
+  width: 250px !important;
+  height: 100px !important;
+  transform: scale(1.5);
+}
+
 .marquee {
   display: flex;
 }
