@@ -64,11 +64,20 @@
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
+      
+      let isSuccess = false;
+      try {
+          const json = JSON.parse(data);
+          if (json.success === "true" || json.success === true) isSuccess = true;
+      } catch(e) {
+          if (data.trim() == 'OK') isSuccess = true;
+      }
+
+      if (isSuccess) {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(data ? data : 'Error al enviar el formulario.'); 
       }
     })
     .catch((error) => {
