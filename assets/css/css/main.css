@@ -1748,12 +1748,13 @@ section, .section {
 }
 
 .custodian-logo {
-  width: 140px;
-  height: 55px;
+  width: 100px;
+  height: 35px;
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.6;
   transition: all 0.3s ease;
+  transform: scale(0.8);
 }
 
 .custodian-logo:hover {
@@ -1762,9 +1763,9 @@ section, .section {
 }
 
 .logo-scaled {
-  width: 145px !important;
-  height: 55px !important;
-  transform: scale(1.05);
+  width: 100px !important;
+  height: 35px !important;
+  transform: scale(0.8) !important;
 }
 
 .marquee {
