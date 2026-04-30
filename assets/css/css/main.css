@@ -738,7 +738,7 @@ section, .section {
 
 .hero h2 {
   margin: 0;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -770,7 +770,7 @@ section, .section {
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
