@@ -4,9 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Inversiones Corporativas | Wealth Trust Partners Panamá</title>
-    <meta name="description" content="Asesoría especializada en inversiones corporativas, optimización de tesorería y bienes raíces comerciales en Panamá.">
-    <meta name="keywords" content="inversiones corporativas panama, tesoreria empresas, bienes raices comerciales">
+    <title data-i18n="service-3-seo-title">Inversiones Corporativas en Panamá | Tesorería y Fondos — Wealth Trust Partners</title>
+    <meta name="description" data-i18n="service-3-seo-description"
+        content="Asesoría especializada en inversiones corporativas, optimización de tesorería, bienes raíces comerciales y fondos de inversión en la economía dolarizada de Panamá.">
+    <meta name="keywords" content="inversiones corporativas panama, tesoreria empresas, bienes raices comerciales, fondos de inversion panama, corporate investment panama">
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Corporate Investments",
+      "provider": {
+        "@type": "Organization",
+        "name": "Wealth Trust Partners"
+      },
+      "areaServed": "Global",
+      "description": "Specialized advisory on corporate investments, investment funds, commercial real estate, and high-yield opportunities in Panama."
+    }
+    </script>
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
     <link rel="stylesheet" href="/assets/css/bootstrap-icons.css">
@@ -23,20 +38,21 @@
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="/index.html#hero">Inicio</a></li>
-                    <li><a href="/index.html#about">Nosotros</a></li>
-                    <li class="dropdown"><span>Servicios</span><i class="bi bi-chevron-down toggle-dropdown"></i>
+                    <li><a href="/index.html#hero" data-i18n="nav-home">Inicio</a></li>
+                    <li><a href="/index.html#about" data-i18n="nav-about">Nosotros</a></li>
+                    <li class="dropdown"><span data-i18n="nav-services">Servicios</span><i class="bi bi-chevron-down toggle-dropdown"></i>
                         <ul>
-                            <li><a href="/servicios/gestion-patrimonial.html">Gestión Patrimonial</a></li>
-                            <li><a href="/servicios/fideicomisos-fundaciones.html">Fideicomisos y Fundaciones</a></li>
-                            <li><a href="/servicios/inversiones-corporativas.html" class="active">Inversiones Corporativas</a></li>
-                            <li><a href="/servicios/family-office.html">Family Office</a></li>
-                            <li><a href="/servicios/servicios-crypto.html">Servicios Crypto</a></li>
+                            <li><a href="/servicios/gestion-patrimonial.html" data-i18n="service-1-title">Gestión Patrimonial</a></li>
+                            <li><a href="/servicios/fideicomisos-fundaciones.html" data-i18n="service-2-title">Fideicomisos y Fundaciones</a></li>
+                            <li><a href="/servicios/inversiones-corporativas.html" class="active" data-i18n="service-3-title">Inversiones Corporativas</a></li>
+                            <li><a href="/servicios/family-office.html" data-i18n="service-4-title">Family Office</a></li>
+                            <li><a href="/servicios/servicios-crypto.html" data-i18n="service-5-title">Servicios Crypto</a></li>
                         </ul>
                     </li>
-                    <li><a href="/por-que-panama.html">¿Por Qué Panamá?</a></li>
-                    <li><a href="/index.html#team">Equipo</a></li>
-                    <li><a href="/index.html#contact">Contacto</a></li>
+                    <li><a href="/por-que-panama.html" data-i18n="nav-panama">¿Por Qué Panamá?</a></li>
+                    <li><a href="/index.html#team" data-i18n="nav-team">Equipo</a></li>
+                    <li><a href="/index.html#contact" data-i18n="nav-contact">Contacto</a></li>
+                    <li><button id="language-toggle">EN</button></li>
                 </ul><i class="d-xl-none mobile-nav-toggle bi bi-list"></i>
             </nav>
         </div>
@@ -44,11 +60,11 @@
     <main class="main">
         <div class="page-title dark-background">
             <div class="container">
-                <h1>Inversiones Corporativas</h1>
+                <h1 data-i18n="service-3-title">Inversiones Corporativas</h1>
                 <nav class="breadcrumbs">
                     <ol>
-                        <li><a href="/index.html">Inicio</a></li>
-                        <li class="current">Inversiones Corporativas</li>
+                        <li><a href="/index.html" data-i18n="nav-home">Inicio</a></li>
+                        <li class="current" data-i18n="service-3-title">Inversiones Corporativas</li>
                     </ol>
                 </nav>
             </div>
@@ -58,24 +74,24 @@
                 <div class="row gy-4">
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="services-list">
-                            <a href="/servicios/gestion-patrimonial.html">Gestión Patrimonial</a>
-                            <a href="/servicios/fideicomisos-fundaciones.html">Fideicomisos y Fundaciones</a>
-                            <a href="/servicios/inversiones-corporativas.html" class="active">Inversiones Corporativas</a>
-                            <a href="/servicios/family-office.html">Family Office</a>
-                            <a href="/servicios/servicios-crypto.html">Servicios Crypto</a>
+                            <a href="/servicios/gestion-patrimonial.html" data-i18n="service-1-title">Gestión Patrimonial</a>
+                            <a href="/servicios/fideicomisos-fundaciones.html" data-i18n="service-2-title">Fideicomisos y Fundaciones</a>
+                            <a href="/servicios/inversiones-corporativas.html" class="active" data-i18n="service-3-title">Inversiones Corporativas</a>
+                            <a href="/servicios/family-office.html" data-i18n="service-4-title">Family Office</a>
+                            <a href="/servicios/servicios-crypto.html" data-i18n="service-5-title">Servicios Crypto</a>
                         </div>
-                        <h4>Eficiencia de Capital</h4>
-                        <p>Hacemos que el excedente de caja de su empresa rinda al máximo con el menor riesgo posible.</p>
+                        <h4 data-i18n="service-3-side-t">Eficiencia de Capital</h4>
+                        <p data-i18n="service-3-side-d">Hacemos que el excedente de caja de su empresa rinda al máximo con el menor riesgo posible.</p>
                     </div>
                     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Soluciones Financieras para el Crecimiento Empresarial</h3>
-                        <p>Ayudamos a corporaciones y oficinas familiares a optimizar su liquidez y diversificar sus inversiones. A través de nuestro conocimiento local y conexiones globales, identificamos oportunidades estratégicas de inversión en Panamá y la región.</p>
+                        <h3 data-i18n="service-3-h3">Soluciones Financieras para el Crecimiento Empresarial</h3>
+                        <p data-i18n="service-3-p1">Ayudamos a corporaciones y oficinas familiares a optimizar su liquidez y diversificar sus inversiones. A través de nuestro conocimiento local y conexiones globales, identificamos oportunidades estratégicas de inversión en Panamá y la región.</p>
                         <ul>
-                            <li><i class="bi bi-check-circle"></i><span><strong>Gestión de Tesorería:</strong> Estrategias de corto y mediano plazo para preservar el valor del dinero.</span></li>
-                            <li><i class="bi bi-check-circle"></i><span><strong>Bienes Raíces Comerciales:</strong> Acceso a activos inmobiliarios generadores de renta en ubicaciones prime.</span></li>
-                            <li><i class="bi bi-check-circle"></i><span><strong>Oportunidades de Alto Rendimiento:</strong> Participación en fondos privados y proyectos de infraestructura.</span></li>
+                            <li><i class="bi bi-check-circle"></i><span><strong data-i18n="service-3-list1-t">Gestión de Tesorería:</strong> <span data-i18n="service-3-list1-d">Estrategias de corto y mediano plazo para preservar el valor del dinero.</span></span></li>
+                            <li><i class="bi bi-check-circle"></i><span><strong data-i18n="service-3-list2-t">Bienes Raíces Comerciales:</strong> <span data-i18n="service-3-list2-d">Acceso a activos inmobiliarios generadores de renta en ubicaciones prime.</span></span></li>
+                            <li><i class="bi bi-check-circle"></i><span><strong data-i18n="service-3-list3-t">Oportunidades de Alto Rendimiento:</strong> <span data-i18n="service-3-list3-d">Participación en fondos privados y proyectos de infraestructura.</span></span></li>
                         </ul>
-                        <p>Nuestro equipo actúa como un CFO externo para su empresa, alineando la estrategia financiera con los objetivos corporativos de expansión y seguridad.</p>
+                        <p data-i18n="service-3-p2">Nuestro equipo actúa como un CFO externo para su empresa, alineando la estrategia financiera con los objetivos corporativos de expansión y seguridad.</p>
                     </div>
                 </div>
             </div>
@@ -95,6 +111,7 @@
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="/assets/js/aos.min.js"></script>
     <script src="/assets/js/js/main.js"></script>
+    <script src="/assets/js/js/i18n.js"></script>
 </body>
 
 </html>

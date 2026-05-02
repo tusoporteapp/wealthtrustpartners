@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Wealth Trust Partners | Gestión Patrimonial e Inversiones en Panamá — Wealth Management</title>
-    <meta name="description"
-        content="Wealth Trust Partners: su aliado estratégico en gestión patrimonial, fideicomisos e inversiones en Panamá. Proteja y multiplique su patrimonio desde el Hub de las Américas. Wealth management Panama.">
+    <title data-i18n="seo-title">Cómo Invertir en Panamá | Abrir Cuenta Bancaria | Protección Patrimonial — Wealth Trust Partners</title>
+    <meta name="description" data-i18n="seo-description"
+        content="Wealth Trust Partners: su aliado estratégico para invertir en Panamá. Especialistas en gestión patrimonial, apertura de cuentas bancarias y estructuras de protección de activos para inversionistas internacionales.">
     <meta name="keywords"
-        content="wealth management Panamá, inversiones en Panamá, asesor financiero Panamá, gestión patrimonial Panamá, fideicomiso Panamá, family office Panama, Panama trust fund, investment firms Panama">
+        content="invertir en panamá, inversiones en panamá, abrir cuenta en panamá, gestión patrimonial panamá, fideicomiso panamá, family office panamá, protección patrimonial panamá, invest in panama, asset protection panama">
     <link rel="canonical" href="https://wealthtrustpartners.com/">
     <link rel="alternate" hreflang="es" href="https://wealthtrustpartners.com/">
     <link rel="alternate" hreflang="en" href="https://wealthtrustpartners.com/en/">
@@ -79,6 +79,62 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
     </script>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Wealth Trust Partners",
+      "url": "https://wealthtrustpartners.com/",
+      "logo": "https://wealthtrustpartners.com/assets/img/logo.png",
+      "description": "Wealth Trust Partners is a premier wealth management firm in Panama, specializing in asset protection, trusts, and strategic investments for international clients.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Torre BAC, Piso 32, Av. Balboa",
+        "addressLocality": "Panama City",
+        "addressCountry": "PA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+507-6067-6869",
+        "contactType": "customer service",
+        "email": "info@wealthtrustpartners.com"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo puede un extranjero invertir en Panamá?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Panamá ofrece múltiples vías para inversores extranjeros, desde el mercado de valores y bienes raíces hasta programas de residencia por inversión. El proceso comienza con la apertura de una cuenta de inversión o bancaria, para lo cual Wealth Trust Partners actúa como su puente estratégico con instituciones reguladas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuáles son los beneficios de invertir en Panamá?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los principales beneficios incluyen una economía dolarizada, estabilidad política, un sistema fiscal territorial (no se pagan impuestos por ingresos fuera de Panamá), y una ubicación geográfica estratégica que conecta los mercados globales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo abrir una cuenta bancaria en Panamá siendo extranjero?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La apertura requiere documentación que demuestre el origen de los fondos, referencias bancarias y personales, y pasaporte vigente. En WTP asistimos en la recopilación y pre-aprobación de documentos para facilitar el proceso con los bancos custodios."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body class="index-page">
@@ -89,20 +145,21 @@
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="/index.html#hero" class="active">Inicio</a></li>
-                    <li><a href="/index.html#about">Nosotros</a></li>
-                    <li class="dropdown"><span>Servicios</span><i class="bi bi-chevron-down toggle-dropdown"></i>
+                    <li><a href="/index.html#hero" class="active" data-i18n="nav-home">Inicio</a></li>
+                    <li><a href="/index.html#about" data-i18n="nav-about">Nosotros</a></li>
+                    <li class="dropdown"><span data-i18n="nav-services">Servicios</span><i class="bi bi-chevron-down toggle-dropdown"></i>
                         <ul>
-                            <li><a href="/servicios/gestion-patrimonial.html">Gestión Patrimonial</a></li>
-                            <li><a href="/servicios/fideicomisos-fundaciones.html">Fideicomisos y Fundaciones</a></li>
-                            <li><a href="/servicios/inversiones-corporativas.html">Inversiones Corporativas</a></li>
-                            <li><a href="/servicios/family-office.html">Family Office</a></li>
-                            <li><a href="/servicios/servicios-crypto.html">Servicios Crypto</a></li>
+                            <li><a href="/servicios/gestion-patrimonial.html" data-i18n="service-1-title">Gestión Patrimonial</a></li>
+                            <li><a href="/servicios/fideicomisos-fundaciones.html" data-i18n="service-2-title">Fideicomisos y Fundaciones</a></li>
+                            <li><a href="/servicios/inversiones-corporativas.html" data-i18n="service-3-title">Inversiones Corporativas</a></li>
+                            <li><a href="/servicios/family-office.html" data-i18n="service-4-title">Family Office</a></li>
+                            <li><a href="/servicios/servicios-crypto.html" data-i18n="service-5-title">Servicios Crypto</a></li>
                         </ul>
                     </li>
-                    <li><a href="/por-que-panama.html">¿Por Qué Panamá?</a></li>
-                    <li><a href="/index.html#team">Equipo</a></li>
-                    <li><a href="/index.html#contact">Contacto</a></li>
+                    <li><a href="/por-que-panama.html" data-i18n="nav-panama">¿Por Qué Panamá?</a></li>
+                    <li><a href="/index.html#team" data-i18n="nav-team">Equipo</a></li>
+                    <li><a href="/index.html#contact" data-i18n="nav-contact">Contacto</a></li>
+                    <li><button id="language-toggle">EN</button></li>
                 </ul><i class="d-xl-none mobile-nav-toggle bi bi-list"></i>
             </nav>
         </div>
@@ -113,30 +170,30 @@
             <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
-                        <h2>Protección patrimonial global y crecimiento estratégico desde la economía más sólida de la región.</h2>
-                        <p>Gestión patrimonial, fideicomisos e inversiones estratégicas en la única economía dolarizada
+                        <h2 data-i18n="hero-h2">Protección patrimonial global y crecimiento estratégico desde la economía más sólida de la región.</h2>
+                        <p data-i18n="hero-p">Gestión patrimonial, fideicomisos e inversiones estratégicas en la única economía dolarizada
                             de Centroamérica con sistema fiscal territorial.</p>
-                        <a href="#contact" class="btn-get-started" id="cta-hero">Agendar Consulta Privada</a>
+                        <a href="#contact" class="btn-get-started" id="cta-hero" data-i18n="hero-cta">Agendar Consulta Privada</a>
                     </div>
                 </div>
             </div>
         </section>
         <section id="about" class="about section">
             <div class="container section-title" data-aos="fade-up">
-                <h2>Quiénes Somos</h2>
-                <p>Su aliado estratégico en la protección y crecimiento de patrimonio internacional desde Panamá</p>
+                <h2 data-i18n="about-title">Quiénes Somos</h2>
+                <p data-i18n="about-subtitle">Su aliado estratégico en la protección y crecimiento de patrimonio internacional desde Panamá</p>
             </div>
             <div class="container">
                 <div class="row gy-5">
                     <div class="col-xl-5 d-flex flex-column content" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Expertos en Wealth Management con Sede en el Corazón Financiero de Panamá</h3>
-                        <p>En Wealth Trust Partners combinamos más de dos décadas de experiencia en gestión patrimonial
+                        <h3 data-i18n="about-h3">Expertos en Wealth Management con Sede en el Corazón Financiero de Panamá</h3>
+                        <p data-i18n="about-p">En Wealth Trust Partners combinamos más de dos décadas de experiencia en gestión patrimonial
                             internacional con un profundo conocimiento del ecosistema financiero panameño. Asesoramos a
                             individuos de alto patrimonio, familias empresarias, corporaciones multinacionales y
                             expatriados que buscan proteger, estructurar y multiplicar su riqueza desde una de las
                             jurisdicciones más favorables del continente.</p>
                         <a class="align-self-center align-self-xl-start about-btn" href="#services"
-                            id="cta-about"><span>Nuestros Servicios</span><i class="bi bi-chevron-right"></i></a>
+                            id="cta-about"><span data-i18n="about-btn">Nuestros Servicios</span><i class="bi bi-chevron-right"></i></a>
                     </div>
                     <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
                         <div class="row gy-4">
@@ -173,7 +230,7 @@
                                 class="flex-shrink-0 bi bi-people"></i>
                             <div><span data-purecounter-start="0" data-purecounter-end="150"
                                     data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Clientes Activos</p>
+                                <p data-i18n="stats-clients">Clientes Activos</p>
                             </div>
                         </div>
                     </div>
@@ -183,7 +240,7 @@
                             <div><span data-purecounter-start="0" data-purecounter-end="500"
                                     data-purecounter-duration="1" class="purecounter" data-purecounter-prefix="$"
                                     data-purecounter-suffix="M+"></span>
-                                <p>Patrimonio Bajo Gestión</p>
+                                <p data-i18n="stats-aum">Patrimonio Bajo Gestión</p>
                             </div>
                         </div>
                     </div>
@@ -192,7 +249,7 @@
                                 class="flex-shrink-0 bi bi-award"></i>
                             <div><span data-purecounter-start="0" data-purecounter-end="20"
                                     data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Años de Experiencia</p>
+                                <p data-i18n="stats-exp">Años de Experiencia</p>
                             </div>
                         </div>
                     </div>
@@ -201,7 +258,7 @@
                                 class="flex-shrink-0 bi bi-globe"></i>
                             <div><span data-purecounter-start="0" data-purecounter-end="15"
                                     data-purecounter-duration="1" class="purecounter"></span>
-                                <p>Jurisdicciones</p>
+                                <p data-i18n="stats-juris">Jurisdicciones</p>
                             </div>
                         </div>
                     </div>
@@ -210,8 +267,8 @@
         </section>
         <section id="services" class="services section light-background">
             <div class="container section-title" data-aos="fade-up">
-                <h2>Nuestros Servicios</h2>
-                <p>Soluciones integrales de gestión patrimonial e inversiones diseñadas para proteger y multiplicar su
+                <h2 data-i18n="services-title">Nuestros Servicios</h2>
+                <p data-i18n="services-subtitle">Soluciones integrales de gestión patrimonial e inversiones diseñadas para proteger y multiplicar su
                     riqueza</p>
             </div>
             <div class="container">
@@ -220,8 +277,8 @@
                         <div class="flex-shrink-0 icon"><i class="bi bi-shield-check"></i></div>
                         <div>
                             <h4 class="title"><a class="stretched-link"
-                                    href="/servicios/gestion-patrimonial.html">Gestión Patrimonial</a></h4>
-                            <p class="description">Estrategias personalizadas de wealth management para preservar,
+                                    href="/servicios/gestion-patrimonial.html" data-i18n="service-1-title">Gestión Patrimonial</a></h4>
+                            <p class="description" data-i18n="service-1-desc">Estrategias personalizadas de wealth management para preservar,
                                 proteger y hacer crecer su patrimonio con diversificación internacional y acceso a
                                 mercados globales.</p>
                         </div>
@@ -230,8 +287,8 @@
                         <div class="flex-shrink-0 icon"><i class="bi bi-building"></i></div>
                         <div>
                             <h4 class="title"><a class="stretched-link"
-                                    href="/servicios/fideicomisos-fundaciones.html">Fideicomisos y Fundaciones</a></h4>
-                            <p class="description">Estructuración de trusts y fundaciones de interés privado bajo las
+                                    href="/servicios/fideicomisos-fundaciones.html" data-i18n="service-2-title">Fideicomisos y Fundaciones</a></h4>
+                            <p class="description" data-i18n="service-2-desc">Estructuración de trusts y fundaciones de interés privado bajo las
                                 leyes panameñas para la protección de activos y planificación sucesoral efectiva.</p>
                         </div>
                     </div>
@@ -239,8 +296,8 @@
                         <div class="flex-shrink-0 icon"><i class="bi bi-graph-up-arrow"></i></div>
                         <div>
                             <h4 class="title"><a class="stretched-link"
-                                    href="/servicios/inversiones-corporativas.html">Inversiones Corporativas</a></h4>
-                            <p class="description">Asesoría especializada en inversiones corporativas, fondos de
+                                    href="/servicios/inversiones-corporativas.html" data-i18n="service-3-title">Inversiones Corporativas</a></h4>
+                            <p class="description" data-i18n="service-3-desc">Asesoría especializada en inversiones corporativas, fondos de
                                 inversión, bienes raíces comerciales y oportunidades de alto rendimiento en Panamá y la
                                 región.</p>
                         </div>
@@ -248,9 +305,9 @@
                     <div class="col-md-6 col-lg-4 d-flex service-item" data-aos="fade-up" data-aos-delay="400">
                         <div class="flex-shrink-0 icon"><i class="bi bi-people"></i></div>
                         <div>
-                            <h4 class="title"><a class="stretched-link" href="/servicios/family-office.html">Family
+                            <h4 class="title"><a class="stretched-link" href="/servicios/family-office.html" data-i18n="service-4-title">Family
                                     Office</a></h4>
-                            <p class="description">Servicios integrales de family office para familias de alto
+                            <p class="description" data-i18n="service-4-desc">Servicios integrales de family office para familias de alto
                                 patrimonio: desde gestión de inversiones hasta coordinación filantrópica y gobernanza
                                 familiar.</p>
                         </div>
@@ -258,9 +315,9 @@
                     <div class="col-md-6 col-lg-4 d-flex service-item" data-aos="fade-up" data-aos-delay="500">
                         <div class="flex-shrink-0 icon"><i class="bi bi-globe2"></i></div>
                         <div>
-                            <h4 class="title"><a class="stretched-link" href="#contact">Planificación Fiscal
+                            <h4 class="title"><a class="stretched-link" href="#contact" data-i18n="service-5-title">Planificación Fiscal
                                     Internacional</a></h4>
-                            <p class="description">Optimización fiscal legal aprovechando el sistema territorial de
+                            <p class="description" data-i18n="service-5-desc">Optimización fiscal legal aprovechando el sistema territorial de
                                 Panamá y tratados internacionales. Estructuras eficientes para operaciones
                                 multinacionales.</p>
                         </div>
@@ -268,31 +325,31 @@
                     <div class="col-md-6 col-lg-4 d-flex service-item" data-aos="fade-up" data-aos-delay="600">
                         <div class="flex-shrink-0 icon"><i class="bi bi-passport"></i></div>
                         <div>
-                            <h4 class="title"><a class="stretched-link" href="#contact">Residencia e Inmigración de
+                            <h4 class="title"><a class="stretched-link" href="#contact" data-i18n="service-6-title">Residencia e Inmigración de
                                     Inversión</a></h4>
-                            <p class="description">Gestión de visas de Inversionista Calificado, Naciones Amigas y
+                            <p class="description" data-i18n="service-6-desc">Gestión de visas de Inversionista Calificado, Naciones Amigas y
                                 Pensionado. Acompañamiento integral para establecerse en Panamá.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex service-item" data-aos="fade-up" data-aos-delay="700">
                         <div class="flex-shrink-0 icon"><i class="bi bi-currency-bitcoin"></i></div>
                         <div>
-                            <h4 class="title"><a class="stretched-link" href="/servicios/servicios-crypto.html">Asesoría en Crypto Activos</a></h4>
-                            <p class="description">Orientación estratégica para la gestión segura de activos digitales, diversificación de portafolio y cumplimiento regulatorio en criptomonedas.</p>
+                            <h4 class="title"><a class="stretched-link" href="/servicios/servicios-crypto.html" data-i18n="service-7-title">Asesoría en Crypto Activos</a></h4>
+                            <p class="description" data-i18n="service-7-desc">Orientación estratégica para la gestión segura de activos digitales, diversificación de portafolio y cumplimiento regulatorio en criptomonedas.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex service-item" data-aos="fade-up" data-aos-delay="800">
                         <div class="flex-shrink-0 icon"><i class="bi bi-house-door"></i></div>
                         <div>
-                            <h4 class="title"><a class="stretched-link" href="/servicios/servicios-crypto.html">Bienes Raíces con Crypto</a></h4>
-                            <p class="description">Facilitamos la compra de inmuebles y propiedades comerciales en Panamá utilizando criptomonedas como medio de pago seguro y directo.</p>
+                            <h4 class="title"><a class="stretched-link" href="/servicios/servicios-crypto.html" data-i18n="service-8-title">Bienes Raíces con Crypto</a></h4>
+                            <p class="description" data-i18n="service-8-desc">Facilitamos la compra de inmuebles y propiedades comerciales en Panamá utilizando criptomonedas como medio de pago seguro y directo.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex service-item" data-aos="fade-up" data-aos-delay="900">
                         <div class="flex-shrink-0 icon"><i class="bi bi-arrow-left-right"></i></div>
                         <div>
-                            <h4 class="title"><a class="stretched-link" href="/servicios/servicios-crypto.html">Exchange Fiat & Stablecoins</a></h4>
-                            <p class="description">Servicio de conversión ágil y confiable de Fiat (USD) a USDT y viceversa, garantizando liquidez inmediata para sus operaciones.</p>
+                            <h4 class="title"><a class="stretched-link" href="/servicios/servicios-crypto.html" data-i18n="service-9-title">Exchange Fiat & Stablecoins</a></h4>
+                            <p class="description" data-i18n="service-9-desc">Servicio de conversión ágil y confiable de Fiat (USD) a USDT y viceversa, garantizando liquidez inmediata para sus operaciones.</p>
                         </div>
                     </div>
                 </div>
@@ -473,66 +530,126 @@
         </section>
         <section id="faq" class="faq section light-background">
             <div class="container section-title" data-aos="fade-up">
-                <h2>Preguntas Frecuentes</h2>
-                <p>Respuestas a las consultas más comunes sobre inversiones y gestión patrimonial en Panamá</p>
+                <h2 data-i18n="faq-title">Preguntas Frecuentes</h2>
+                <p data-i18n="faq-subtitle">Respuestas a las consultas más comunes sobre inversiones y gestión patrimonial en Panamá</p>
             </div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="faq-container">
-                            <div data-aos="fade-up" data-aos-delay="200" class="faq-item faq-active"><i
-                                    class="faq-icon bi bi-question-circle"></i>
-                                <h3>¿Qué es el sistema fiscal territorial de Panamá?</h3>
+                            <!-- Category: Inversiones en Panamá -->
+                            <div data-aos="fade-up" data-aos-delay="100" class="faq-item faq-active"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q1">¿Cómo puede un extranjero invertir en Panamá?</h3>
                                 <div class="faq-content">
-                                    <p>Panamá opera bajo un sistema fiscal territorial, lo que significa que solo se
-                                        pagan impuestos sobre los ingresos generados dentro del territorio panameño. Los
-                                        ingresos obtenidos en el extranjero están completamente exentos de impuestos, lo
-                                        que convierte a Panamá en una jurisdicción altamente atractiva para inversores
-                                        internacionales y empresarios con operaciones globales.</p>
+                                    <p data-i18n="faq-a1">Panamá ofrece múltiples vías para inversores extranjeros, desde el mercado de valores y bienes raíces hasta programas de residencia por inversión. El proceso comienza con la apertura de una cuenta de inversión o bancaria, para lo cual Wealth Trust Partners actúa como su puente estratégico con instituciones reguladas.</p>
                                 </div><i class="faq-toggle bi bi-chevron-right"></i>
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="300" class="faq-item"><i
-                                    class="faq-icon bi bi-question-circle"></i>
-                                <h3>¿Cómo puedo abrir un fideicomiso en Panamá?</h3>
+
+                            <div data-aos="fade-up" data-aos-delay="200" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q2">¿Cuáles son los beneficios de invertir en Panamá?</h3>
                                 <div class="faq-content">
-                                    <p>Para constituir un fideicomiso en Panamá se requiere un fideicomitente (quien
-                                        aporta los bienes), un fiduciario autorizado (entidad regulada) y beneficiarios
-                                        definidos. En Wealth Trust Partners gestionamos todo el proceso: desde el diseño
-                                        de la estructura hasta la formalización legal, asegurando el cumplimiento con la
-                                        Ley 1 de 1984 de Fideicomisos de Panamá.</p>
+                                    <p data-i18n="faq-a2">Los principales beneficios incluyen una economía dolarizada, estabilidad política, un sistema fiscal territorial (no se pagan impuestos por ingresos fuera de Panamá), y una ubicación geográfica estratégica que conecta los mercados globales.</p>
                                 </div><i class="faq-toggle bi bi-chevron-right"></i>
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="400" class="faq-item"><i
-                                    class="faq-icon bi bi-question-circle"></i>
-                                <h3>¿Cuál es la inversión mínima para comenzar?</h3>
+
+                            <div data-aos="fade-up" data-aos-delay="300" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q3">¿Qué tipos de inversiones son más rentables en Panamá?</h3>
                                 <div class="faq-content">
-                                    <p>Nuestros servicios están diseñados para individuos y familias de alto patrimonio.
-                                        El monto mínimo varía según el tipo de servicio: la gestión patrimonial integral
-                                        parte desde $250,000 USD, mientras que la estructuración de fideicomisos y
-                                        fundaciones puede iniciarse con montos más flexibles. Le invitamos a agendar una
-                                        consulta privada para evaluar sus necesidades específicas.</p>
+                                    <p data-i18n="faq-a3">Históricamente, los bienes raíces comerciales, los fondos de inversión locales y los instrumentos de renta fija han mostrado rendimientos sólidos. Panamá también es un hub creciente para inversiones en tecnología y activos digitales.</p>
                                 </div><i class="faq-toggle bi bi-chevron-right"></i>
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="500" class="faq-item"><i
-                                    class="faq-icon bi bi-question-circle"></i>
-                                <h3>¿Qué visas de inversionista ofrece Panamá?</h3>
+
+                            <div data-aos="fade-up" data-aos-delay="400" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q4">¿Es seguro invertir en Panamá como extranjero?</h3>
                                 <div class="faq-content">
-                                    <p>Panamá ofrece varios programas de residencia por inversión: la Visa de
-                                        Inversionista Calificado (inversión mínima de $300,000 USD), el programa de
-                                        Naciones Amigas (para ciudadanos de más de 50 países con vínculos económicos con
-                                        Panamá), y la Visa de Pensionado (con beneficios fiscales y descuentos
-                                        exclusivos). Nuestro equipo gestiona todo el proceso migratorio.</p>
+                                    <p data-i18n="faq-a4">Sí, Panamá cuenta con un marco legal robusto que protege la propiedad privada y la inversión extranjera. El Centro Bancario Internacional está altamente regulado, proporcionando un entorno seguro y transparente para el capital global.</p>
                                 </div><i class="faq-toggle bi bi-chevron-right"></i>
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="600" class="faq-item"><i
-                                    class="faq-icon bi bi-question-circle"></i>
-                                <h3>¿Mis inversiones están protegidas?</h3>
+                            <!-- Category: Cuentas Bancarias y Financieras -->
+                            <div data-aos="fade-up" data-aos-delay="500" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q5">¿Cómo abrir una cuenta bancaria en Panamá siendo extranjero?</h3>
                                 <div class="faq-content">
-                                    <p>Sí. Panamá cuenta con un Centro Bancario Internacional regulado por la
-                                        Superintendencia de Bancos de Panamá y un mercado de valores supervisado por la
-                                        Superintendencia del Mercado de Valores (SMV). Los fideicomisos panameños
-                                        ofrecen protección legal contra embargos y litigios de terceras jurisdicciones,
-                                        brindando una capa adicional de seguridad para sus activos.</p>
+                                    <p data-i18n="faq-a5">La apertura requiere documentación que demuestre el origen de los fondos, referencias bancarias y personales, y pasaporte vigente. En WTP asistimos en la recopilación y pre-aprobación de documentos para facilitar el proceso con los bancos custodios.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-delay="600" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q6">¿Qué documentos necesito para abrir una cuenta de inversión en Panamá?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a6">Generalmente se requiere: copia de pasaporte, una segunda identificación, comprobante de domicilio, declaraciones de impuestos o estados financieros que validen la fuente de riqueza, y referencias bancarias.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-delay="700" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q7">¿Puedo abrir una cuenta en Panamá sin viajar?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a7">Dependiendo de la institución y el perfil del cliente, algunos procesos pueden iniciarse de forma remota mediante entrevistas por video y envío de documentos apostillados. Sin embargo, para ciertos productos finales, la presencia física o representación legal formal es recomendable.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <!-- Category: Protección Patrimonial -->
+                            <div data-aos="fade-up" data-aos-delay="800" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q8">¿Qué es un fideicomiso panameño y cómo protege mi patrimonio?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a8">Un fideicomiso es un contrato legal donde los bienes son transferidos a un fiduciario para ser administrados en favor de beneficiarios. Ofrece protección contra embargos y litigios, asegurando que el patrimonio se mantenga para los fines establecidos por el fideicomitente.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-delay="900" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q9">¿Cuál es la diferencia entre un fideicomiso y una fundación de interés privado?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a9">La fundación es una entidad jurídica propia (similar a un testamento vivo), mientras que el fideicomiso es un contrato. Ambos sirven para la protección y sucesión, pero la elección depende de la complejidad de los activos y los objetivos de privacidad.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-delay="1000" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q10">¿Cómo constituir una sociedad anónima en Panamá?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a10">Se requiere un agente residente (abogado panameño) y un mínimo de tres directores. El proceso es ágil y permite que los accionistas sean extranjeros, manteniendo un alto nivel de flexibilidad operativa.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <!-- Category: Beneficios Fiscales -->
+                            <div data-aos="fade-up" data-aos-delay="1100" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q11">¿Qué es el sistema fiscal territorial de Panamá y cómo me beneficia?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a11">Significa que Panamá solo grava la renta producida dentro del país. Si usted tiene una sociedad en Panamá que genera ingresos por negocios fuera del territorio, esos ingresos están exentos de impuestos locales.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-delay="1200" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q12">¿Panamá cobra impuestos sobre ingresos del extranjero?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a12">No. Los ingresos derivados de operaciones comerciales, inversiones o dividendos obtenidos fuera de Panamá no están sujetos al pago de impuesto sobre la renta en Panamá.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <!-- Category: Residencia e Inmigración -->
+                            <div data-aos="fade-up" data-aos-delay="1300" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q13">¿Qué visas de inversionista ofrece Panamá?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a13">Las opciones principales incluyen la Visa de Inversionista Calificado (residencia permanente rápida), la Visa de Naciones Amigas y la Visa de Solvencia Económica Propia.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-delay="1400" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q14">¿Qué es la Visa de Naciones Amigas?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a14">Es un régimen migratorio especial para ciudadanos de países con lazos estrechos con Panamá, que permite obtener residencia permanente mediante una inversión inmobiliaria o depósito a plazo fijo.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-delay="1500" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q15">¿Cómo pueden las empresas extranjeras beneficiarse de Panamá?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a15">Pueden establecer sedes regionales (SEM), utilizar zonas francas con incentivos fiscales especiales, o simplemente operar desde Panamá para optimizar su logística y tesorería global en dólares.</p>
+                                </div><i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-delay="1600" class="faq-item"><i class="faq-icon bi bi-question-circle"></i>
+                                <h3 data-i18n="faq-q16">¿Los fideicomisos panameños son inembargables?</h3>
+                                <div class="faq-content">
+                                    <p data-i18n="faq-a16">Bajo la Ley 1 de 1984, los bienes del fideicomiso constituyen un patrimonio separado del fiduciario y del fideicomitente, y no pueden ser embargados por obligaciones de estos últimos, salvo por fraude demostrado.</p>
                                 </div><i class="faq-toggle bi bi-chevron-right"></i>
                             </div>
                         </div>
@@ -542,8 +659,8 @@
         </section>
         <section id="contact" class="contact section">
             <div class="container section-title" data-aos="fade-up">
-                <h2>Contacto</h2>
-                <p>Agende una consulta privada y confidencial con nuestro equipo de asesores patrimoniales</p>
+                <h2 data-i18n="contact-title">Contacto</h2>
+                <p data-i18n="contact-subtitle">Agende una consulta privada y confidencial con nuestro equipo de asesores patrimoniales</p>
             </div>
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div data-aos="fade-up" data-aos-delay="200" class="info-wrap">
@@ -551,7 +668,7 @@
                         <div class="col-lg-4">
                             <div class="d-flex align-items-center info-item"><i class="flex-shrink-0 bi bi-geo-alt"></i>
                                 <div>
-                                    <h3>Oficina Principal</h3>
+                                    <h3 data-i18n="contact-office">Oficina Principal</h3>
                                     <p>Torre BAC, Piso 32, Av. Balboa, Punta Pacífica, Ciudad de Panamá, Panamá</p>
                                 </div>
                             </div>
@@ -560,7 +677,7 @@
                             <div class="d-flex align-items-center info-item"><i
                                     class="flex-shrink-0 bi bi-telephone"></i>
                                 <div>
-                                    <h3>Llámenos</h3>
+                                    <h3 data-i18n="contact-call">Llámenos</h3>
                                     <p>+507 6067-6869</p>
                                 </div>
                             </div>
@@ -569,7 +686,7 @@
                             <div class="d-flex align-items-center info-item"><i
                                     class="flex-shrink-0 bi bi-envelope"></i>
                                 <div>
-                                    <h3>Escríbanos</h3>
+                                    <h3 data-i18n="contact-email">Escríbanos</h3>
                                     <p>info@wealthtrustpartners.com</p>
                                 </div>
                             </div>
@@ -581,14 +698,14 @@
                     <input type="hidden" name="_subject" value="Nuevo Mensaje - Wealth Trust Partners Web">
                     <div class="row gy-4">
                         <div class="col-md-6"><input class="form-control" type="text" name="name"
-                                placeholder="Su Nombre Completo" required="" id="contact-name"></div>
+                                placeholder="Su Nombre Completo" required="" id="contact-name" data-i18n="contact-name"></div>
                         <div class="col-md-6"><input class="form-control" type="email" name="email"
-                                placeholder="Su Correo Electrónico" required="" id="contact-email"></div>
+                                placeholder="Su Correo Electrónico" required="" id="contact-email" data-i18n="contact-email"></div>
                         <div class="col-md-12"><input class="form-control" type="text" name="subject"
-                                placeholder="Asunto" required="" id="contact-subject"></div>
+                                placeholder="Asunto" required="" id="contact-subject" data-i18n="contact-subject"></div>
                         <div class="col-md-12"><textarea class="form-control" name="message"
                                 placeholder="Cuéntenos sobre sus objetivos patrimoniales..." required="" rows="6"
-                                id="contact-message"></textarea></div>
+                                id="contact-message" data-i18n="contact-message"></textarea></div>
                         <div class="col-md-12 text-center">
                             <div class="loading"><span>Enviando...</span></div>
                             <div class="error-message"></div>
@@ -604,16 +721,16 @@
     <footer id="footer" class="footer dark-background">
         <div class="container">
             <h3 class="sitename">Wealth Trust Partners</h3>
-            <p>Su aliado estratégico en gestión patrimonial e inversiones desde el Hub de las Américas.</p>
+            <p data-i18n="footer-p">Su aliado estratégico en gestión patrimonial e inversiones desde el Hub de las Américas.</p>
             <div class="d-flex justify-content-center social-links"><a href="#" aria-label="LinkedIn"><i
                         class="bi bi-linkedin"></i></a><a href="#" aria-label="Twitter"><i
                         class="bi bi-twitter-x"></i></a><a href="#" aria-label="Instagram"><i
                         class="bi bi-instagram"></i></a></div>
             <div class="copyright"><span>Copyright © 2026</span><strong class="px-1 sitename">Wealth Trust
-                    Partners</strong><span>Todos los derechos reservados</span></div>
+                    Partners</strong><span data-i18n="footer-rights">Todos los derechos reservados</span></div>
             <div class="credits"
                 style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:15px;max-width:800px;margin-left:auto;margin-right:auto;line-height:1.5;">
-                <p>Descargo de responsabilidad: Wealth Trust Partners no es una entidad bancaria, casa de valores, ni fiduciaria. No estamos regulados por la Superintendencia de Bancos ni por la Superintendencia del Mercado de Valores de Panamá. No brindamos ningún tipo de asesoría sobre productos de inversión, ni prometemos o garantizamos retornos financieros futuros. Nuestro servicio de asesoría tiene el propósito exclusivo de orientar y asistir a los clientes en el proceso de introducción y apertura de cuentas con contrapartes locales y custodios internacionales regulados. Toda decisión financiera conlleva riesgos.</p>
+                <p data-i18n="disclaimer">Descargo de responsabilidad: Wealth Trust Partners no es una entidad bancaria, casa de valores, ni fiduciaria. No estamos regulados por la Superintendencia de Bancos ni por la Superintendencia del Mercado de Valores de Panamá. No brindamos ningún tipo de asesoría sobre productos de inversión, ni prometemos o garantizamos retornos financieros futuros. Nuestro servicio de asesoría tiene el propósito exclusivo de orientar y asistir a los clientes en el proceso de introducción y apertura de cuentas con contrapartes locales y custodios internacionales regulados. Toda decisión financiera conlleva riesgos.</p>
             </div>
         </div>
     </footer><a class="d-flex justify-content-center align-items-center scroll-top" href="#" id="scroll-top"><i
@@ -631,6 +748,7 @@
     <script src="assets/js/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/js/js/main.js"></script>
+    <script src="assets/js/js/i18n.js"></script>
 </body>
 
 </html>

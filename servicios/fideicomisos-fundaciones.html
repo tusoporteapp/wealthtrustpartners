@@ -4,9 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Fideicomisos y Fundaciones | Wealth Trust Partners Panamá</title>
-    <meta name="description" content="Estructuración de trusts y fundaciones de interés privado bajo las leyes panameñas para la protección de activos y planificación sucesoral.">
-    <meta name="keywords" content="fideicomisos panama, fundaciones de interes privado, proteccion de activos">
+    <title data-i18n="service-2-seo-title">Fideicomisos y Fundaciones en Panamá | Protección de Activos — Wealth Trust Partners</title>
+    <meta name="description" data-i18n="service-2-seo-description"
+        content="Estructuración de trusts y fundaciones de interés privado bajo las leyes panameñas para la protección de activos, planificación sucesoral y blindaje patrimonial.">
+    <meta name="keywords" content="fideicomisos panama, fundaciones de interes privado, proteccion de activos, asset protection panama, trust panama, offshore trust">
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Trusts and Foundations",
+      "provider": {
+        "@type": "Organization",
+        "name": "Wealth Trust Partners"
+      },
+      "areaServed": "Global",
+      "description": "Structuring of trusts and private interest foundations under Panamanian laws for asset protection and effective estate planning."
+    }
+    </script>
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
     <link rel="stylesheet" href="/assets/css/bootstrap-icons.css">
@@ -23,20 +38,21 @@
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="/index.html#hero">Inicio</a></li>
-                    <li><a href="/index.html#about">Nosotros</a></li>
-                    <li class="dropdown"><span>Servicios</span><i class="bi bi-chevron-down toggle-dropdown"></i>
+                    <li><a href="/index.html#hero" data-i18n="nav-home">Inicio</a></li>
+                    <li><a href="/index.html#about" data-i18n="nav-about">Nosotros</a></li>
+                    <li class="dropdown"><span data-i18n="nav-services">Servicios</span><i class="bi bi-chevron-down toggle-dropdown"></i>
                         <ul>
-                            <li><a href="/servicios/gestion-patrimonial.html">Gestión Patrimonial</a></li>
-                            <li><a href="/servicios/fideicomisos-fundaciones.html" class="active">Fideicomisos y Fundaciones</a></li>
-                            <li><a href="/servicios/inversiones-corporativas.html">Inversiones Corporativas</a></li>
-                            <li><a href="/servicios/family-office.html">Family Office</a></li>
-                            <li><a href="/servicios/servicios-crypto.html">Servicios Crypto</a></li>
+                            <li><a href="/servicios/gestion-patrimonial.html" data-i18n="service-1-title">Gestión Patrimonial</a></li>
+                            <li><a href="/servicios/fideicomisos-fundaciones.html" class="active" data-i18n="service-2-title">Fideicomisos y Fundaciones</a></li>
+                            <li><a href="/servicios/inversiones-corporativas.html" data-i18n="service-3-title">Inversiones Corporativas</a></li>
+                            <li><a href="/servicios/family-office.html" data-i18n="service-4-title">Family Office</a></li>
+                            <li><a href="/servicios/servicios-crypto.html" data-i18n="service-5-title">Servicios Crypto</a></li>
                         </ul>
                     </li>
-                    <li><a href="/por-que-panama.html">¿Por Qué Panamá?</a></li>
-                    <li><a href="/index.html#team">Equipo</a></li>
-                    <li><a href="/index.html#contact">Contacto</a></li>
+                    <li><a href="/por-que-panama.html" data-i18n="nav-panama">¿Por Qué Panamá?</a></li>
+                    <li><a href="/index.html#team" data-i18n="nav-team">Equipo</a></li>
+                    <li><a href="/index.html#contact" data-i18n="nav-contact">Contacto</a></li>
+                    <li><button id="language-toggle">EN</button></li>
                 </ul><i class="d-xl-none mobile-nav-toggle bi bi-list"></i>
             </nav>
         </div>
@@ -44,11 +60,11 @@
     <main class="main">
         <div class="page-title dark-background">
             <div class="container">
-                <h1>Fideicomisos y Fundaciones</h1>
+                <h1 data-i18n="service-2-title">Fideicomisos y Fundaciones</h1>
                 <nav class="breadcrumbs">
                     <ol>
-                        <li><a href="/index.html">Inicio</a></li>
-                        <li class="current">Fideicomisos y Fundaciones</li>
+                        <li><a href="/index.html" data-i18n="nav-home">Inicio</a></li>
+                        <li class="current" data-i18n="service-2-title">Fideicomisos y Fundaciones</li>
                     </ol>
                 </nav>
             </div>
@@ -58,24 +74,24 @@
                 <div class="row gy-4">
                     <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="services-list">
-                            <a href="/servicios/gestion-patrimonial.html">Gestión Patrimonial</a>
-                            <a href="/servicios/fideicomisos-fundaciones.html" class="active">Fideicomisos y Fundaciones</a>
-                            <a href="/servicios/inversiones-corporativas.html">Inversiones Corporativas</a>
-                            <a href="/servicios/family-office.html">Family Office</a>
-                            <a href="/servicios/servicios-crypto.html">Servicios Crypto</a>
+                            <a href="/servicios/gestion-patrimonial.html" data-i18n="service-1-title">Gestión Patrimonial</a>
+                            <a href="/servicios/fideicomisos-fundaciones.html" class="active" data-i18n="service-2-title">Fideicomisos y Fundaciones</a>
+                            <a href="/servicios/inversiones-corporativas.html" data-i18n="service-3-title">Inversiones Corporativas</a>
+                            <a href="/servicios/family-office.html" data-i18n="service-4-title">Family Office</a>
+                            <a href="/servicios/servicios-crypto.html" data-i18n="service-5-title">Servicios Crypto</a>
                         </div>
-                        <h4>Seguridad Jurídica</h4>
-                        <p>Panamá ofrece uno de los marcos legales más robustos del mundo para la protección del patrimonio familiar frente a riesgos externos.</p>
+                        <h4 data-i18n="service-2-side-t">Seguridad Jurídica</h4>
+                        <p data-i18n="service-2-side-d">Panamá ofrece uno de los marcos legales más robustos del mundo para la protección del patrimonio familiar frente a riesgos externos.</p>
                     </div>
                     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Estructuras Robustas para Blindar su Legado</h3>
-                        <p>La preservación del capital a través de generaciones requiere de vehículos jurídicos eficientes. En Wealth Trust Partners nos especializamos en diseñar estructuras a medida utilizando la legislación panameña, ampliamente reconocida a nivel internacional.</p>
+                        <h3 data-i18n="service-2-h3">Estructuras Robustas para Blindar su Legado</h3>
+                        <p data-i18n="service-2-p1">La preservación del capital a través de generaciones requiere de vehículos jurídicos eficientes. En Wealth Trust Partners nos especializamos en diseñar estructuras a medida utilizando la legislación panameña, ampliamente reconocida a nivel internacional.</p>
                         <ul>
-                            <li><i class="bi bi-check-circle"></i><span><strong>Fideicomisos (Ley 1 de 1984):</strong> Flexibilidad absoluta para administrar bienes según sus instrucciones precisas.</span></li>
-                            <li><i class="bi bi-check-circle"></i><span><strong>Fundaciones de Interés Privado:</strong> Ideales para la planificación sucesoral sin necesidad de costosos procesos de sucesión.</span></li>
-                            <li><i class="bi bi-check-circle"></i><span><strong>Inembargabilidad:</strong> Protección efectiva contra demandas civiles y litigios en terceras jurisdicciones.</span></li>
+                            <li><i class="bi bi-check-circle"></i><span><strong data-i18n="service-2-list1-t">Fideicomisos (Ley 1 de 1984):</strong> <span data-i18n="service-2-list1-d">Flexibilidad absoluta para administrar bienes según sus instrucciones precisas.</span></span></li>
+                            <li><i class="bi bi-check-circle"></i><span><strong data-i18n="service-2-list2-t">Fundaciones de Interés Privado:</strong> <span data-i18n="service-2-list2-d">Ideales para la planificación sucesoral sin necesidad de costosos procesos de sucesión.</span></span></li>
+                            <li><i class="bi bi-check-circle"></i><span><strong data-i18n="service-2-list3-t">Inembargabilidad:</strong> <span data-i18n="service-2-list3-d">Protección efectiva contra demandas civiles y litigios en terceras jurisdicciones.</span></span></li>
                         </ul>
-                        <p>Nuestros expertos legales y fiduciarios le acompañarán en cada paso: desde la conceptualización de la estructura hasta su administración y cumplimiento normativo.</p>
+                        <p data-i18n="service-2-p2">Nuestros expertos legales y fiduciarios le acompañarán en cada paso: desde la conceptualización de la estructura hasta su administración y cumplimiento normativo.</p>
                     </div>
                 </div>
             </div>
@@ -95,6 +111,7 @@
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="/assets/js/aos.min.js"></script>
     <script src="/assets/js/js/main.js"></script>
+    <script src="/assets/js/js/i18n.js"></script>
 </body>
 
 </html>
