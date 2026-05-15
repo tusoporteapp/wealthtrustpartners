@@ -1687,22 +1687,22 @@ section, .section {
 -------------------------------------------------------------- */
 
 /*--------------------------------------------------------------
-# Custodians Marquee
+# aliados Marquee
 --------------------------------------------------------------*/
-.custodians {
+.aliados {
   padding: 40px 0;
   background-color: #ffffff;
   border-top: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
 }
 
-.custodians-wrapper {
+.aliados-wrapper {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.custodians-title {
+.aliados-title {
   padding-left: 50px;
   padding-right: 30px;
   background-color: #ffffff;
@@ -1711,7 +1711,7 @@ section, .section {
   flex-shrink: 0;
 }
 
-.custodians-title h2 {
+.aliados-title h2 {
   font-family: var(--heading-font);
   font-size: 2.2rem;
   font-weight: 700;
@@ -1875,11 +1875,11 @@ section, .section {
 
 /* Responsivo para el wrapper */
 @media (max-width: 768px) {
-  .custodians-wrapper {
+  .aliados-wrapper {
     flex-direction: column;
     align-items: flex-start;
   }
-  .custodians-title {
+  .aliados-title {
     padding-left: 20px;
     padding-bottom: 20px;
   }
