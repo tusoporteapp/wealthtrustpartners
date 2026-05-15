@@ -1682,28 +1682,48 @@ section, .section {
   color: var(--accent-color);
 }
 
+/* --------------------------------------------------------------
+# Starter Section Section
+-------------------------------------------------------------- */
 
 /*--------------------------------------------------------------
-# Aliados Section
+# Custodians Marquee
 --------------------------------------------------------------*/
-.aliados {
-  padding: 60px 0;
+.custodians {
+  padding: 40px 0;
   background-color: #ffffff;
-  overflow: hidden;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.custodians-wrapper {
+  display: flex;
+  align-items: center;
   width: 100%;
 }
 
-.aliados .section-title {
-  padding-bottom: 30px;
-  text-align: center;
+.custodians-title {
+  padding-left: 50px;
+  padding-right: 30px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.custodians-title h2 {
+  font-family: var(--heading-font);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0A1628; /* Navy oscuro */
+  margin: 0;
+  line-height: 1;
 }
 
 .marquee-container {
-  width: 100%;
   overflow: hidden;
-  white-space: nowrap;
+  width: 100%;
   position: relative;
-  padding: 20px 0;
 }
 
 .marquee-container::before,
@@ -1711,8 +1731,8 @@ section, .section {
   content: "";
   position: absolute;
   top: 0;
-  width: 150px;
-  height: 100%;
+  bottom: 0;
+  width: 100px;
   z-index: 2;
   pointer-events: none;
 }
@@ -1727,49 +1747,141 @@ section, .section {
   background: linear-gradient(to left, #ffffff, transparent);
 }
 
-.aliados-marquee {
-  display: inline-block;
+.marquee {
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  -webkit-animation: scroll 30s linear infinite;
   white-space: nowrap;
-  animation: marqueeLTR 40s linear infinite;
   will-change: transform;
 }
 
-.aliados-marquee:hover {
+.marquee-content:hover {
   animation-play-state: paused;
+  -webkit-animation-play-state: paused;
 }
 
-.aliados-item {
-  display: inline-block;
-  padding: 0 45px;
-  vertical-align: middle;
+.marquee-item {
+  flex: 0 0 auto;
+  width: 250px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
 }
 
-.aliados-item img {
-  height: 25px;
-  width: auto;
-  max-width: 160px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+.marquee-item span {
+  font-family: var(--nav-font);
+  font-weight: 600;
+  color: #a0a5aa; /* Gris como la imagen */
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
-.aliados-item img:hover {
-  transform: scale(1.1);
+.marquee-item span:hover {
+  color: #C9A84C;
 }
 
-@keyframes marqueeLTR {
+/* Logos Simulados */
+.logo-pershing {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.logo-ib {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.logo-stonex {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.logo-av {
+  font-family: Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.logo-bny {
+  font-family: 'Times New Roman', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.logo-swissquote {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.logo-jpmorgan {
+  font-family: Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.logo-santander {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.logo-euroclear {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.logo-citibank {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+.logo-mercantil {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.logo-latinclear {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+@-webkit-keyframes scroll {
   0% {
-    transform: translateX(-50%);
-  }
-  100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+  100% {
+    -webkit-transform: translateX(calc(-290px * 12));
+    transform: translateX(calc(-290px * 12));
+  }
 }
 
-@-webkit-keyframes marqueeLTR {
+@keyframes scroll {
   0% {
-    -webkit-transform: translateX(-50%);
-  }
-  100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+  100% {
+    -webkit-transform: translateX(calc(-290px * 12));
+    transform: translateX(calc(-290px * 12));
+  }
 }
+
+/* Responsivo para el wrapper */
+@media (max-width: 768px) {
+  .custodians-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .custodians-title {
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+}
+
