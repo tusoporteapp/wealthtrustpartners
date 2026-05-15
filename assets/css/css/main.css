@@ -1747,141 +1747,124 @@ section, .section {
   background: linear-gradient(to left, #ffffff, transparent);
 }
 
-.marquee {
-  display: flex;
+/*--------------------------------------------------------------
+# Aliados Section
+--------------------------------------------------------------*/
+.aliados {
+  padding: 30px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
 }
 
-.marquee-content {
+.aliados-wrapper {
   display: flex;
-  animation: scroll 30s linear infinite;
-  -webkit-animation: scroll 30s linear infinite;
+  align-items: center;
+  width: 100%;
+}
+
+.aliados-title {
+  padding-left: 50px;
+  padding-right: 40px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.aliados-title h2 {
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0A1628;
+  margin: 0;
+  line-height: 1;
+}
+
+.marquee-container {
+  flex-grow: 1;
+  overflow: hidden;
   white-space: nowrap;
+  position: relative;
+  padding: 10px 0;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.aliados-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marqueeLTR 40s linear infinite;
   will-change: transform;
 }
 
-.marquee-content:hover {
+.aliados-marquee:hover {
   animation-play-state: paused;
-  -webkit-animation-play-state: paused;
 }
 
-.marquee-item {
-  flex: 0 0 auto;
-  width: 250px;
-  margin: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
+.aliados-item {
+  display: inline-block;
+  padding: 0 45px;
+  vertical-align: middle;
 }
 
-.marquee-item span {
-  font-family: var(--nav-font);
-  font-weight: 600;
-  color: #a0a5aa; /* Gris como la imagen */
-  font-size: 1.3rem;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
+.aliados-item img {
+  height: 10px; /* Tamaño exacto pedido */
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.marquee-item span:hover {
-  color: #C9A84C;
+.aliados-item img:hover {
+  transform: scale(1.1);
 }
 
-/* Logos Simulados */
-.logo-pershing {
-  font-family: Georgia, serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.logo-ib {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  letter-spacing: -1px;
-}
-.logo-stonex {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.logo-av {
-  font-family: Georgia, serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-.logo-bny {
-  font-family: 'Times New Roman', serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.logo-swissquote {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-.logo-jpmorgan {
-  font-family: Georgia, serif;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-.logo-santander {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
-.logo-euroclear {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  text-transform: lowercase;
-}
-.logo-citibank {
-  font-family: Arial, sans-serif;
-  font-weight: 700;
-  text-transform: lowercase;
-}
-.logo-mercantil {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-.logo-latinclear {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-@-webkit-keyframes scroll {
+@keyframes marqueeLTR {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   100% {
-    -webkit-transform: translateX(calc(-290px * 12));
-    transform: translateX(calc(-290px * 12));
-  }
-}
-
-@keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+@-webkit-keyframes marqueeLTR {
+  0% {
+    -webkit-transform: translateX(-50%);
+  }
   100% {
-    -webkit-transform: translateX(calc(-290px * 12));
-    transform: translateX(calc(-290px * 12));
+    transform: translateX(0);
   }
 }
 
-/* Responsivo para el wrapper */
-@media (max-width: 768px) {
-  .custodians-wrapper {
+@media (max-width: 991px) {
+  .aliados-wrapper {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
-  .custodians-title {
-    padding-left: 20px;
-    padding-bottom: 20px;
+  .aliados-title {
+    padding: 0 0 20px 0;
   }
 }
 
