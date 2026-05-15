@@ -1687,42 +1687,23 @@ section, .section {
 # Aliados Section
 --------------------------------------------------------------*/
 .aliados {
-  padding: 30px 0;
+  padding: 60px 0;
   background-color: #ffffff;
   overflow: hidden;
   width: 100%;
 }
 
-.aliados-wrapper {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.aliados-title {
-  padding-left: 50px;
-  padding-right: 30px;
-  background-color: #ffffff;
-  position: relative;
-  z-index: 10;
-  flex-shrink: 0;
-}
-
-.aliados-title h2 {
-  font-family: var(--heading-font);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #0A1628;
-  margin: 0;
-  line-height: 1;
+.aliados .section-title {
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .marquee-container {
   width: 100%;
-  padding: 10px 0;
-  background: #ffffff;
-  position: relative;
   overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 20px 0;
 }
 
 .marquee-container::before,
@@ -1730,7 +1711,7 @@ section, .section {
   content: "";
   position: absolute;
   top: 0;
-  width: 100px;
+  width: 150px;
   height: 100%;
   z-index: 2;
   pointer-events: none;
@@ -1747,11 +1728,9 @@ section, .section {
 }
 
 .aliados-marquee {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  width: max-content;
-  animation: marqueeLTR 45s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+  animation: marqueeLTR 40s linear infinite;
   will-change: transform;
 }
 
@@ -1760,29 +1739,23 @@ section, .section {
 }
 
 .aliados-item {
-  flex: 0 0 auto;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  padding: 0 45px;
+  vertical-align: middle;
 }
 
 .aliados-item img {
-  height: 22px; /* Tamaño pequeño según ejemplo */
+  height: 25px;
   width: auto;
-  max-width: 140px;
+  max-width: 160px;
   object-fit: contain;
-  filter: grayscale(100%); /* Grayscale como en el ejemplo */
-  opacity: 0.6;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .aliados-item img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.1);
 }
 
-/* Animación de Izquierda a Derecha (LTR) */
 @keyframes marqueeLTR {
   0% {
     transform: translateX(-50%);
@@ -1797,17 +1770,6 @@ section, .section {
     -webkit-transform: translateX(-50%);
   }
   100% {
-    -webkit-transform: translateX(0);
-  }
-}
-
-@media (max-width: 768px) {
-  .aliados-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .aliados-title {
-    padding-left: 20px;
-    padding-bottom: 20px;
+    transform: translateX(0);
   }
 }
