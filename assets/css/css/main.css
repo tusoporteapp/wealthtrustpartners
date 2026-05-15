@@ -1687,20 +1687,39 @@ section, .section {
 # Aliados Section
 --------------------------------------------------------------*/
 .aliados {
-  padding: 40px 0;
+  padding: 30px 0;
   background-color: #ffffff;
   overflow: hidden;
   width: 100%;
 }
 
-.aliados .section-title {
-  padding-bottom: 20px;
-  text-align: center;
+.aliados-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.aliados-title {
+  padding-left: 50px;
+  padding-right: 30px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.aliados-title h2 {
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0A1628;
+  margin: 0;
+  line-height: 1;
 }
 
 .marquee-container {
   width: 100%;
-  padding: 40px 0;
+  padding: 10px 0;
   background: #ffffff;
   position: relative;
   overflow: hidden;
@@ -1711,7 +1730,7 @@ section, .section {
   content: "";
   position: absolute;
   top: 0;
-  width: 150px;
+  width: 100px;
   height: 100%;
   z-index: 2;
   pointer-events: none;
@@ -1732,7 +1751,7 @@ section, .section {
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   width: max-content;
-  animation: marqueeLTR 40s linear infinite;
+  animation: marqueeLTR 45s linear infinite;
   will-change: transform;
 }
 
@@ -1742,18 +1761,25 @@ section, .section {
 
 .aliados-item {
   flex: 0 0 auto;
-  padding: 0 50px;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .aliados-item img {
-  height: 25px; /* Más pequeño aún */
+  height: 22px; /* Tamaño pequeño según ejemplo */
   width: auto;
-  max-width: 150px;
+  max-width: 140px;
   object-fit: contain;
+  filter: grayscale(100%); /* Grayscale como en el ejemplo */
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.aliados-item img:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 
 /* Animación de Izquierda a Derecha (LTR) */
@@ -1772,5 +1798,16 @@ section, .section {
   }
   100% {
     -webkit-transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .aliados-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .aliados-title {
+    padding-left: 20px;
+    padding-bottom: 20px;
   }
 }
