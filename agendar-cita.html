@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title data-i18n="cita-seo-title">Agendar Cita - Wealth Trust Partners</title>
+    <meta name="description" data-i18n="cita-seo-description" content="Agende una consulta privada y confidencial con nuestro equipo de asesores patrimoniales.">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap">
+    <link rel="stylesheet" href="/assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/aos.min.css">
+    <link rel="stylesheet" href="/assets/css/css/main.css">
+    <style>
+        .cita-hero {
+            background-color: #1b3a4b; /* Dark slate blue */
+            color: #fff;
+            padding: 120px 0 60px 0;
+            margin-top: 80px; /* offset for header */
+        }
+        .cita-hero img {
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50px;
+            object-fit: cover;
+            width: 100%;
+            max-height: 500px;
+        }
+        .cita-details {
+            background-color: #fff;
+            padding: 80px 0;
+        }
+        .cita-details img {
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            object-fit: cover;
+            width: 100%;
+            max-height: 600px;
+        }
+        .cita-bullet {
+            margin-bottom: 25px;
+        }
+        .cita-bullet h5 {
+            color: #1b3a4b;
+            font-weight: 700;
+        }
+        .cita-bullet p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .cita-form-section {
+            background-color: #3e7b8c; /* Lighter teal */
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .btn-cita-form {
+            background-color: #fff;
+            color: #3e7b8c;
+            font-weight: 700;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-cita-form:hover {
+            background-color: #f1f1f1;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body class="starter-page-page">
+    <header class="d-flex align-items-center header fixed-top" id="header">
+        <div class="container-fluid position-relative d-flex justify-content-between align-items-center container-xl">
+            <a class="d-flex align-items-center logo" href="/index.html">
+                <h1 class="sitename">WTPartners</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/index.html#hero" data-i18n="nav-home">Inicio</a></li>
+                    <li><a href="/index.html#about" data-i18n="nav-about">Nosotros</a></li>
+                    <li class="dropdown"><span data-i18n="nav-services">Servicios</span><i class="bi bi-chevron-down toggle-dropdown"></i>
+                        <ul>
+                            <li><a href="/servicios/gestion-patrimonial.html" data-i18n="service-1-title">Gestión Patrimonial</a></li>
+                            <li><a href="/servicios/fideicomisos.html" data-i18n="service-2-title">Fideicomisos</a></li>
+                            <li><a href="/servicios/fundaciones.html" data-i18n="service-6-title">Fundaciones</a></li>
+                            <li><a href="/servicios/inversiones-corporativas.html" data-i18n="service-3-title">Inversiones Corporativas</a></li>
+                            <li><a href="/servicios/family-office.html" data-i18n="service-4-title">Family Office</a></li>
+                            <li><a href="/servicios/servicios-crypto.html" data-i18n="service-5-title">Servicios Crypto</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/por-que-panama.html" data-i18n="nav-panama">¿Por Qué Panamá?</a></li>
+                    <li><a href="/index.html#team" data-i18n="nav-team">Equipo</a></li>
+                    <li><a href="/index.html#contact" data-i18n="nav-contact">Contacto</a></li>
+                    <li><a class="btn-getstarted px-3 py-2 ms-xl-3" style="background:var(--accent-color); color:#fff; border-radius:5px; font-weight:600; font-size:14px;" href="#login" data-i18n="nav-client-login">Acceso a Clientes</a></li>
+                    <li><button id="language-toggle">EN</button></li>
+                </ul><i class="d-xl-none mobile-nav-toggle bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="cita-hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
+                        <h1 class="display-4 fw-bold mb-4" data-i18n="cita-hero-title">Hablemos de tu futuro financiero</h1>
+                        <p class="lead mb-5" data-i18n="cita-hero-desc">Reservar tu sesión con un asesor financiero es el siguiente paso para asegurar que tus metas financieras sean dirigidas por medio de un plan de inversión personalizado.</p>
+                        <a href="#register" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold" data-i18n="cita-hero-btn">Agenda una cita</a>
+                    </div>
+                    <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+                        <img src="/assets/img/handshake.png" alt="Reunión financiera" class="shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section class="cita-details">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 pe-lg-5" data-aos="fade-right">
+                        <h2 class="display-5 fw-bold mb-5" style="color: #1b3a4b;" data-i18n="cita-details-title">¿Qué esperar de la Sesión?</h2>
+                        
+                        <p class="mb-4" style="font-size: 1.1rem; color: #444;" data-i18n="cita-details-intro">Una sesión complementaria de 30 minutos vía telefónica o por videoconferencia con un asesor financiero para entender necesidades y/o metas.</p>
+                        
+                        <div class="cita-bullet">
+                            <h5 data-i18n="cita-bullet1-title">Amigable.</h5>
+                            <p data-i18n="cita-bullet1-desc">No existe una agenda definida, pero nuestros asesores tratarán de entender quién eres y lo que buscas hacer.</p>
+                        </div>
+                        
+                        <div class="cita-bullet">
+                            <h5 data-i18n="cita-bullet2-title">Sin obligaciones.</h5>
+                            <p data-i18n="cita-bullet2-desc">Esta es una sesión complementaria sin costo ni obligaciones.</p>
+                        </div>
+                        
+                        <div class="cita-bullet">
+                            <h5 data-i18n="cita-bullet3-title">Transparente.</h5>
+                            <p data-i18n="cita-bullet3-desc">No hay documentos que firmar y ninguna presión para dar el siguiente paso.</p>
+                        </div>
+                        
+                        <div class="cita-bullet">
+                            <h5 data-i18n="cita-bullet4-title">Preparando la sesión.</h5>
+                            <p data-i18n="cita-bullet4-desc">La única preparación para la llamada es solo tener la información relevante a mano y una idea de las preguntas que quisieras conversar.</p>
+                        </div>
+                        
+                        <div class="cita-bullet">
+                            <p data-i18n="cita-bullet5-desc">Es importante resaltar que en esta consulta gratuita no encontrarás un análisis detallado de tus finanzas, ninguna recomendación ni resultado específico.</p>
+                        </div>
+                        
+                        <div class="cita-bullet">
+                            <h5 data-i18n="cita-bullet6-title">¿Y después?</h5>
+                            <p data-i18n="cita-bullet6-desc">Después de la consulta, si deseas continuar, puedes organizar tu primera sesión formal o tomarte el tiempo necesario para pensarlo. No existe ninguna obligación de continuar.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+                        <img src="/assets/img/wealth_advisor.png" alt="Asesor Financiero" class="shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form / CTA Section -->
+        <section id="register" class="cita-form-section">
+            <div class="container" data-aos="zoom-in">
+                <h2 class="fw-bold mb-4" data-i18n="cita-form-title">Inicie el camino hacia su tranquilidad financiera</h2>
+                <p class="mb-5 lead" data-i18n="cita-form-desc">Complete el siguiente formulario y un asesor se comunicará con usted a la brevedad para coordinar la fecha y hora de la sesión.</p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form action="#" method="post" role="form" class="bg-white p-4 p-md-5 rounded shadow" style="text-align: left; color: #333;">
+                            <div class="row gy-4">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label fw-bold" data-i18n="form-name">Nombre Completo</label>
+                                    <input type="text" name="name" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-bold" data-i18n="form-email">Correo Electrónico</label>
+                                    <input type="email" class="form-control" name="email" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label fw-bold" data-i18n="form-phone">Teléfono (con código de país)</label>
+                                    <input type="text" class="form-control" name="phone" id="phone" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="country" class="form-label fw-bold" data-i18n="form-country">País de Residencia</label>
+                                    <input type="text" class="form-control" name="country" id="country" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="message" class="form-label fw-bold" data-i18n="form-message">Breve descripción de su interés (Opcional)</label>
+                                    <textarea class="form-control" name="message" rows="4"></textarea>
+                                </div>
+                                <div class="col-md-12 text-center mt-4">
+                                    <button type="submit" class="btn-cita-form" style="background-color: #1b3a4b; color: white;" data-i18n="form-submit">Agendar Sesión</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+        <div class="container">
+            <h3 class="sitename">Wealth Trust Partners</h3>
+            <p>Su aliado estratégico en gestión patrimonial e inversiones desde el Hub de las Américas.</p>
+            <div class="copyright"><span>Copyright © 2026</span><strong class="px-1 sitename">Wealth Trust Partners</strong><span>Todos los derechos reservados</span></div>
+        </div>
+    </footer>
+    <a class="d-flex justify-content-center align-items-center scroll-top" href="#" id="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+    
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/aos.min.js"></script>
+    <script src="/assets/js/js/main.js"></script>
+    <script src="/assets/js/js/i18n.js"></script>
+</body>
+
+</html>
