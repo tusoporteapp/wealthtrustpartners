@@ -1,23 +1,21 @@
 /**
  * Form Validation & Multi-Gateway Delivery Handler - Wealth Trust Partners
- * Version: 20261106_v5
+ * Version: 20261106_v6
  * 
- * High-reliability submission engine for static hosting:
- * 1. Primary Gateway: ShipMyForm instant endpoint (delivers directly to info@wealthtrustpartners.com)
- * 2. Secondary Gateway: FormSubmit.io fallback (no-cors transmission)
- * 3. Failsafe: Native background iframe submission (bypasses browser CORS & fetch restrictions)
- * 4. LocalStorage Vault: Stores all lead inquiries with timestamp in localStorage.wtp_leads
- * 5. Instant UI feedback: Elegant loader, green success confirmation, and zero raw fetch errors
+ * Direct notification delivery to:
+ * - info@wealthtrustpartners.com (forwarded via Cloudflare Email Routing to Gmail)
+ * - wealthtrustpartners@gmail.com (direct CC notification)
+ * - ShipMyForm dashboard backup
  */
 (function () {
   "use strict";
 
-  const WTP_PRIMARY_ENDPOINT = "https://shipmyform.com/to/info@wealthtrustpartners.com";
-  const WTP_SECONDARY_ENDPOINT = "https://formsubmit.io/send/info@wealthtrustpartners.com";
+  const WTP_EMAIL_ENDPOINT = "https://formsubmit.io/send/info@wealthtrustpartners.com";
+  const WTP_DASHBOARD_ENDPOINT = "https://shipmyform.com/to/info@wealthtrustpartners.com";
+  const WTP_GMAIL_DESTINATION = "wealthtrustpartners@gmail.com";
   const WTP_INBOX_EMAIL = "info@wealthtrustpartners.com";
   const WTP_WHATSAPP_PHONE = "50760676869";
 
-  // Ensure background hidden iframe exists for 100% CORS-proof native submissions
   function ensureHiddenIframe() {
     let iframe = document.getElementById('wtp_silent_iframe');
     if (!iframe) {
@@ -73,7 +71,14 @@
           urlParams.append(key, value);
         });
 
-        // Always vault lead to localStorage so client contact is never lost
+        // Ensure CC to wealthtrustpartners@gmail.com is always attached
+        if (!formValues['_cc']) {
+          formData.append('_cc', WTP_GMAIL_DESTINATION);
+          urlParams.append('_cc', WTP_GMAIL_DESTINATION);
+          formValues['_cc'] = WTP_GMAIL_DESTINATION;
+        }
+
+        // Vault lead in localStorage so contact is never lost
         try {
           let saved = JSON.parse(localStorage.getItem('wtp_leads') || '[]');
           saved.push({
@@ -84,11 +89,13 @@
           });
           localStorage.setItem('wtp_leads', JSON.stringify(saved));
         } catch (e) {
-          // ignore storage quota errors
+          // ignore quota limits
         }
 
-        // Execute submission through multi-gateway pipeline
-        dispatchMultiGateway(thisForm, urlParams, formData, formValues, {
+        // Dual dispatch:
+        // 1. Send to FormSubmit.io for real SMTP email delivery to Cloudflare & Gmail
+        // 2. Send to ShipMyForm for dashboard analytics
+        dispatchNotification(thisForm, formData, urlParams, formValues, {
           loadingEl,
           errorEl,
           sentEl,
@@ -98,65 +105,37 @@
     });
   }
 
-  /**
-   * Multi-Gateway submission:
-   * Try 1: ShipMyForm via fetch (URLSearchParams)
-   * Try 2: FormSubmit.io via fetch (no-cors)
-   * Try 3: Hidden iframe native form submission
-   */
-  function dispatchMultiGateway(thisForm, urlParams, formData, formValues, ui) {
-    const primaryController = new AbortController();
-    const primaryTimeout = setTimeout(() => primaryController.abort(), 6000);
+  function dispatchNotification(thisForm, formData, urlParams, formValues, ui) {
+    // Background ping to ShipMyForm dashboard
+    try {
+      fetch(WTP_DASHBOARD_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: urlParams.toString(),
+        mode: 'no-cors'
+      }).catch(() => {});
+    } catch (e) {}
 
-    // Try 1: ShipMyForm
-    fetch(WTP_PRIMARY_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: urlParams.toString(),
-      signal: primaryController.signal
-    })
-      .then(response => {
-        clearTimeout(primaryTimeout);
-        if (response.ok) {
-          return response.json().catch(() => ({ ok: true }));
-        }
-        throw new Error('Primary gateway returned HTTP ' + response.status);
-      })
-      .then(json => {
-        if (json && json.ok === true) {
-          handleSubmissionSuccess(thisForm, ui);
-        } else {
-          throw new Error(json && json.message ? json.message : 'Primary gateway non-ok response');
-        }
-      })
-      .catch(errPrimary => {
-        clearTimeout(primaryTimeout);
-        // Try 2: FormSubmit.io via no-cors fetch
-        trySecondaryGateway(thisForm, formData, formValues, ui);
-      });
-  }
+    // Primary Email Gateway: FormSubmit.io with CC to Gmail
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 6000);
 
-  function trySecondaryGateway(thisForm, formData, formValues, ui) {
-    const secondaryController = new AbortController();
-    const secondaryTimeout = setTimeout(() => secondaryController.abort(), 6000);
-
-    fetch(WTP_SECONDARY_ENDPOINT, {
+    fetch(WTP_EMAIL_ENDPOINT, {
       method: 'POST',
       body: formData,
       mode: 'no-cors',
-      signal: secondaryController.signal
+      signal: controller.signal
     })
       .then(() => {
-        clearTimeout(secondaryTimeout);
-        // no-cors fetch completed successfully
+        clearTimeout(timeout);
         handleSubmissionSuccess(thisForm, ui);
       })
-      .catch(errSecondary => {
-        clearTimeout(secondaryTimeout);
-        // Try 3: Native hidden iframe submission failsafe
+      .catch(() => {
+        clearTimeout(timeout);
+        // Failsafe: Background silent iframe submission
         submitViaHiddenIframe(thisForm, ui, formValues);
       });
   }
@@ -167,7 +146,7 @@
       const prevAction = thisForm.getAttribute('action');
       const prevTarget = thisForm.getAttribute('target');
 
-      thisForm.setAttribute('action', WTP_PRIMARY_ENDPOINT);
+      thisForm.setAttribute('action', WTP_EMAIL_ENDPOINT);
       thisForm.setAttribute('target', 'wtp_silent_iframe');
 
       if (typeof HTMLFormElement.prototype.submit === 'function') {
@@ -176,7 +155,6 @@
         thisForm.submit();
       }
 
-      // Restore form attributes after brief delay
       setTimeout(() => {
         if (prevAction) thisForm.setAttribute('action', prevAction);
         if (prevTarget) thisForm.setAttribute('target', prevTarget);
@@ -185,7 +163,6 @@
         handleSubmissionSuccess(thisForm, ui);
       }, 1000);
     } catch (e) {
-      // If even iframe submission was impossible, show graceful manual contact card
       handleSubmissionFailure(thisForm, formValues, ui);
     }
   }
@@ -226,7 +203,7 @@
     let mailBody = `Nombre: ${name}\nEmail: ${email}\n`;
     if (phone) mailBody += `Teléfono: ${phone}\n`;
     mailBody += `\nMensaje:\n${message}`;
-    const mailtoUrl = `mailto:${WTP_INBOX_EMAIL}?subject=${encodeURIComponent('Contacto Web: ' + subject)}&body=${encodeURIComponent(mailBody)}`;
+    const mailtoUrl = `mailto:${WTP_INBOX_EMAIL}?cc=${WTP_GMAIL_DESTINATION}&subject=${encodeURIComponent('Contacto Web: ' + subject)}&body=${encodeURIComponent(mailBody)}`;
 
     ui.errorEl.style.background = 'transparent';
     ui.errorEl.style.padding = '0';
@@ -251,7 +228,6 @@
     ui.errorEl.classList.add('d-block');
   }
 
-  // Initialize on DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initForms);
   } else {
