@@ -92,6 +92,30 @@
           // ignore quota limits
         }
 
+        // If Web3Forms access_key is configured, use direct high-deliverability API
+        if (formValues['access_key'] && formValues['access_key'] !== 'YOUR_ACCESS_KEY_HERE') {
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(formValues)
+          })
+            .then(res => res.json())
+            .then(data => {
+              if (data && data.success) {
+                handleSubmissionSuccess(thisForm, { loadingEl, errorEl, sentEl, submitBtn });
+              } else {
+                throw new Error(data && data.message ? data.message : 'Web3Forms error');
+              }
+            })
+            .catch(() => {
+              dispatchNotification(thisForm, formData, urlParams, formValues, { loadingEl, errorEl, sentEl, submitBtn });
+            });
+          return;
+        }
+
         // Dual dispatch:
         // 1. Send to FormSubmit.io for real SMTP email delivery to Cloudflare & Gmail
         // 2. Send to ShipMyForm for dashboard analytics
