@@ -171,7 +171,10 @@
                 
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <form action="#" method="post" role="form" class="bg-white p-4 p-md-5 rounded shadow" style="text-align: left; color: #333;">
+                        <form action="https://formsubmit.co/ajax/info@wealthtrustpartners.com" method="post" role="form" class="php-email-form bg-white p-4 p-md-5 rounded shadow" style="text-align: left; color: #333;">
+                            <input type="hidden" name="_subject" value="Nueva Solicitud de Cita - Wealth Trust Partners">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
                             <div class="row gy-4">
                                 <div class="col-md-6">
                                     <label for="name" class="form-label fw-bold" data-i18n="form-name">Nombre Completo</label>
@@ -193,7 +196,12 @@
                                     <label for="message" class="form-label fw-bold" data-i18n="form-message">Breve descripción de su interés (Opcional)</label>
                                     <textarea class="form-control" name="message" rows="4"></textarea>
                                 </div>
-                                <div class="col-md-12 text-center mt-4">
+                                <div class="col-md-12 text-center mt-3">
+                                    <div class="loading"><span>Enviando solicitud...</span></div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message"><span>Su solicitud de sesión ha sido enviada con éxito. Un asesor se comunicará con usted en breve.</span></div>
+                                </div>
+                                <div class="col-md-12 text-center mt-2">
                                     <button type="submit" class="btn-cita-form" style="background-color: #1b3a4b; color: white;" data-i18n="form-submit">Agendar Sesión</button>
                                 </div>
                             </div>
@@ -216,6 +224,7 @@
     
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="/assets/js/aos.min.js"></script>
+    <script src="/assets/js/vendor/php-email-form/validate.js"></script>
     <script src="/assets/js/js/main.js"></script>
     <script src="/assets/js/js/i18n.js"></script>
 </body>
